@@ -1,0 +1,74 @@
+body {
+    background-color: #6B240C;
+}
+#home {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5),
+    rgba(0, 0, 0, 0.5)),url(IMG_20231003_060855.jpg);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    font-family: 'Montserrat';
+    padding: 1% 5%;
+}
+
+#title {
+    text-align: center;
+    padding: 11% 10%;
+}
+
+h1 {
+    font-family: 'Pacifico', cursive;
+    font-size: 4rem;
+    padding: 0 30px;
+    color: #E48F45;
+}
+
+.container-fluid {
+    padding: 0;
+}
+/* NAVBAR SECTION */
+
+.nav-link {
+    font-size: 1.2rem;
+    font-weight: lighter;
+    color: #E48F45;
+}
+.nav-item {
+    padding: 0 1.125rem;
+    font-weight: 900;
+}
+.nav-item :hover {
+    color: #F5CCA0;
+}
+.navbar-brand {
+    font-family: 'EB Garamond', serif;
+    font-size: 2.5rem;
+    font-weight: 600;
+    padding-left: 30px;
+    color: #E48F45;
+}
+.navbar-brand:hover {
+    color: #994D1C;
+}
+
+.btn {
+    margin: 1.25rem;
+    margin-top: 3rem;
+    padding: 0.625rem 1rem;
+    font-weight: 600;
+}
+.btn-dark {
+    background-color: #6B240C;
+    color: #E48F45;
+    border: 0;
+}
+.btn-dark:hover,.btn-light:hover {
+    background-color:#F5CCA0;
+    color: #6B240C;
+}
+.btn-light {
+    background-color: #994D1C;
+    color: #F5CCA0;
+    border: 0;
+}
