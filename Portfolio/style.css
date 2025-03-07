@@ -1,0 +1,169 @@
+html, body {
+    height: 100%;
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+    background-color: rgb(25, 25, 25);
+}
+
+.LandingPage {
+    background-image: url(PortfolioLandingPage.png);
+    background-size: 100% 100%;
+    display: block;
+    margin-top: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+}  
+
+/* Navbar */
+.navBorder {
+    position: fixed;
+    left: 22.5%;
+    margin-top: 10px;
+    padding: 10px;
+    padding: 3px;
+    width: 55%;
+    border-radius: 35px;
+    z-index: 1;
+
+
+/* For border animation color */
+    background: linear-gradient(-45deg, #3c00ff,#3702b2, #44006e, #2a0060);
+	background-size: 400% 400%;
+	animation: gradient 5s ease infinite;
+}
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+.navbar {
+    background-image: url(NavbarBackground.png);
+    background-size: 400%;
+    padding:1px 0px;
+    border-radius: 30px;
+    transition: all 0.3s ease;
+    z-index: 1;
+
+}
+.navbar ul {
+    display: flex;
+    list-style-type: none;
+    justify-content: space-evenly;
+}
+.navbar ul * {
+    color: white;
+    font-family: "Urbanist", serif;
+}
+.navbar .LandingPageLinks {
+    font-size: 1.3em;
+    text-decoration: none;
+    font-style: normal;
+}
+
+/* landing page titles stle */
+
+.LandingPageTitle {
+    width: 65%;
+    position: relative;
+    top: 15em;
+    margin-left: 40px;
+}
+.LandingPageTitle h1 {
+    color: white;
+    font-size: 2.1875em;
+    font-family: "Urbanist", serif;
+    font-weight: 500;
+
+}
+.LandingPageTitle #name {
+    font-family: "Playfair Display", serif;
+    font-weight: 200;
+    font-style: italic;
+    display: inline;
+    font-size: 3em;
+}
+.LandingPageLinks {
+    font-family: "Urbanist", serif;
+    font-weight: 200;
+    font-style: italic;
+    display: inline;
+    font-size: 0.75em;
+    text-decoration: underline;
+    text-underline-offset: 10px;
+    color: rgb(90, 86, 86);
+    transition: 0.4s;
+}   
+
+.LandingPageLinks:hover {
+    color: #8e8d90;
+}
+
+/* About me */
+
+.AboutMe {
+    background-image: url(PortfolioAboutPage.png);
+    background-size: 100% 100%;
+    display: block;
+    margin-top: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 78vh;
+
+    position: absolute;
+    top: 100%;
+    z-index: -1;
+}
+.AboutMeText {
+    display: flex;
+    margin:0px 100px;
+    gap: 50px;
+    align-items: center;
+}
+.AboutMe p{
+    color: white;
+    text-align: justify;
+    font-size: 2.05em;
+    font-family: "Urbanist", serif;
+    font-weight: 500;
+    width: 65%;
+    padding: 0;
+}
+.AboutMe img{
+    width: 250px;
+    height: 250px;
+    border-radius: 100%;
+    margin: auto;
+}
+.imgCover {
+    display: flex;
+    padding:3px;
+    border-radius: 100%;
+    text-align: center;
+    
+    background: linear-gradient(-45deg, #ffffff,#464646, #342355, #2b063d);
+	background-size: 400% 400%;
+	animation: image 5s ease infinite;
+}
+@keyframes image {
+	0% {
+		background-position: 10% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
