@@ -7,7 +7,7 @@ html, body {
 }
 
 .LandingPage {
-    background-image: url(PortfolioLandingPage.png);
+    background-image: url(Assets/BackgroundImg/PortfolioLandingPage.png);
     background-size: 100% 100%;
     display: block;
     margin-top: 0;
@@ -48,7 +48,7 @@ html, body {
 }
 .navbar {
     backdrop-filter: blur(1100px);
-    background-image: url(NavbarBackground.png);
+    background-image: url(Assets/BackgroundImg/NavbarBackground.png);
     background-size: 100%;
     padding:1px 0px;
     border-radius: 30px;
@@ -88,7 +88,7 @@ html, body {
 }
 .LandingPageTitle #name {
     font-family: "Playfair Display", serif;
-    font-weight: 500;
+    font-weight: 100;
     font-style: italic;
     display: inline;
     font-size: 3em;
@@ -112,7 +112,7 @@ html, body {
 /* About me */
 
 .AboutMe {
-    background-image: url(PortfolioAboutPage.png);
+    background-image: url(Assets/BackgroundImg/PortfolioAboutPage.png);
     background-size: 100% 100%;
     display: block;
     position: absolute;
@@ -168,9 +168,10 @@ html, body {
 		background-position: 0% 50%;
 	}
 }
+/* Skills Section */
 
 .skills {
-    background-image: url(PortfolioSkillsPage.png);
+    background-image: url(Assets/BackgroundImg/PortfolioSkillsPage.png);
     background-size: 100% 100%;
     display: block;
     position: absolute;
@@ -182,3 +183,48 @@ html, body {
     top: 178%;
     z-index: -1;    
 }
+
+.stackGrid{
+    background: rgba(115, 0, 255, 0.239);    /*  10% opaque green */ 
+    backdrop-filter: blur(10px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    top: 27%;
+    left:15%;
+    width: 70%;
+    border-radius: 30px;
+    z-index: -2;
+}
+.stackGrid:before {
+    content: '';
+    position: absolute;
+    background-color: #ffffff00;
+    border:solid #6152d1 5px;
+    top: -2px;
+    right: -2px;
+    left: -2px;
+    bottom: -2px;
+    z-index: -3;
+    filter: blur(20px);
+}
+
+.stackGrid h2{
+    font-size: 2.1875em;
+    color: white;
+    font-family: "Urbanist", serif;
+    font-weight: 500;
+}
+.icons {
+    max-width: 75px;
+}
+.webStack, .designStack {
+    display: flex;
+    list-style-type: none;
+    justify-content: center;
+    align-content: center;
+    gap: 20px;
+}
+
