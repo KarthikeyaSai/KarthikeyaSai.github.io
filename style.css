@@ -34,26 +34,27 @@ html, body {
 		background-position: 0% 50%;
 	}
 }
-.navbar {
+.Navbar {
     backdrop-filter: blur(1100px);
     background-image: url(Assets/BackgroundImg/NavbarBackground.png);
     background-size: 100%;
-    padding:1px 0px;
     border-radius: 30px;
     transition: all 0.3s ease;
     z-index: 1;
+    padding:5px 2px;
+
 
 }
-.navbar ul {
+.Navbar ul {
     display: flex;
     list-style-type: none;
     justify-content: space-evenly;
 }
-.navbar ul * {
+.Navbar ul * {
     color: white;
     font-family: "Urbanist", serif;
 }
-.navbar .LandingPageLinks {
+.Navbar .LandingPageLinks {
     font-size: 1.3em;
     text-decoration: none;
     font-style: normal;
@@ -177,7 +178,7 @@ html, body {
     top: 0;
     left: 0;
     width: 100%;
-    height: 100vh;
+    height: 80vh;
     position: absolute;
     top: 170%;
     z-index: -1;    
@@ -267,30 +268,32 @@ html, body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
     position: relative;
     top: 0;
     left: 0;
     width: 100%;
-    height: 100vh;
+    height: 90vh;
     position: absolute;
-    top: 270%;
+    top: 250%;
     z-index: -1;   
 }
 .projects h1 {
-    font-size: 2.5em;
+    font-size: 3.5em;
     font-family: "Urbanist", sans-serif;
     color: white;
     font-weight: 400;
 }
 .cards img {
-    width: 275px;
-    height: 275px;
+    width: 300px;
+    height: 300px;
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
 }
 .cardsProjects {
     display: flex;
     flex-direction: row;
+    gap:40px;
     font-family: "Urbanist", sans-serif;
     font-size: 15px;
     color: white;
@@ -299,25 +302,97 @@ html, body {
     margin: 10px 20px;
     flex-wrap: wrap;
     flex-direction: column;
-    width: 275px;
+    width: 300px;
     text-align: center;
     display: flex;
     background-color: black;
     border-radius: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.cards:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 25px rgba(77, 0, 185, 0.807);
 }
 .cards h2{
     margin: 10px 20px;
+    margin-bottom: 0px;
+    font-weight: 500;
+    letter-spacing: 1px;
 }
 .cards p{
-    margin: 10px 20px;
+    margin: 20px;
+    font-size: 15px;
 }
+
+                                                            /* Footer Contact me section */
+
+footer {
+    background-image: url(Assets/BackgroundImg/PortfolioFooterPage.png);
+    background-size: 100% 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    top: 340%;
+    z-index: -1;    
+}
+footer h1{
+    margin-top: 20px;
+    font-family: "Urbanist", sans-serif;
+    color: white;
+}
+footer p{
+    font-family: "Urbanist", sans-serif;
+    font-size: 20px;
+    letter-spacing: 3px;
+    margin-top: 40px;
+    color: #2a0060;
+}
+form {
+    background-image: url(Assets/BackgroundImg/PortfolioFooterPage.png);
+    width: 65%;
+    gap: 50px;
+    display: flex;
+    flex-direction: column;
+    font-family: "Urbanist", sans-serif;
+    font-size: 25px;
+    color: #ffffff;
+    position: relative; 
+    padding: 20px; 
+    border-radius: 15px; 
+    margin-top: 20px;
+}
+
+form::before {
+    content: '';
+    position: absolute;
+    top: -4px; 
+    left: -4px;
+    right: -4px;
+    bottom: -4px;
+    background: linear-gradient(-45deg, #3c00ff, #3702b2, #44006e, #2a0060);
+    background-size: 400% 400%;
+    animation: gradient 5s ease infinite; 
+    z-index: -1; 
+    border-radius: 19px; 
+    filter: blur(50px);
+}
+.contactGrid{
+    display: flex;
+    gap: 50px;
+}
+.contactGrid .icons{
+    width: 45px;
+}
+
 /* Media Queries */
 @media (max-width: 768px) {
-    .LandingPageTitle {
-        width: 90%;
-        margin-left: 20px;
-        top: 10em;
-    }
     .AboutMeText {
         flex-direction: column;
         gap: 20px;
