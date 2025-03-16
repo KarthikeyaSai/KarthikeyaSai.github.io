@@ -6,19 +6,7 @@ html, body {
     background-color: rgb(25, 25, 25);
 }
 
-.LandingPage {
-    background-image: url(Assets/BackgroundImg/PortfolioLandingPage.png);
-    background-size: 100% 100%;
-    display: block;
-    margin-top: 0;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100vh;
-}  
-
-/* Navbar */
+                                                                            /* Navbar */
 .navBorder {
     position: fixed;
     left: 22.5%;
@@ -71,7 +59,19 @@ html, body {
     font-style: normal;
 }
 
-/* landing page titles stle */
+                                                                    /* landing page titles stle */
+
+.LandingPage {
+    background-image: url(Assets/BackgroundImg/PortfolioLandingPage.png);
+    background-size: 100% 100%;
+    display: block;
+    margin-top: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+}  
 
 .LandingPageTitle {
     width: 70%;
@@ -109,7 +109,7 @@ html, body {
     color: #8e8d90;
 }
 
-/* About me */
+                                                                            /* About me */
 
 .AboutMe {
     background-image: url(Assets/BackgroundImg/PortfolioAboutPage.png);
@@ -167,7 +167,7 @@ html, body {
 		background-position: 0% 50%;
 	}
 }
-/* Skills Section */
+                                                                        /* Skills Section */
 
 .skills {
     background-image: url(Assets/BackgroundImg/PortfolioSkillsPage.png);
@@ -192,8 +192,8 @@ html, body {
     align-items: center;
     position: relative;
     top: 10%;
-    left:15%;
-    width: 70%;
+    left:5%;
+    max-width: 90%;
     border-radius: 30px;
     padding: 30px 5px;
     z-index: -2;
@@ -210,7 +210,10 @@ html, body {
     z-index: -3;
     filter: blur(20px);
 }
-
+.stackIcons {
+    display: flex;
+    gap: 50px;
+}
 .stackGrid h2, h5{
     font-size: 2.1875em;
     color: white;
@@ -220,16 +223,107 @@ html, body {
 .stackGrid h5{
     font-size: 1.25em;
 }
+.grid {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    /* width: 20em; */
+    height: auto;
+    background: rgba(74, 31, 247, 0.086);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    padding: 30px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.grid:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.3);
+}
 .icons {
     max-width: 60px;
+    transition: transform 0.3s ease;
+
 }
 .webStack, .designStack, .mlStack{
-    margin-top: 20px;
-    margin-bottom: 0;
+    padding-inline-start: 0px;
     display: flex;
     list-style-type: none;
     justify-content: center;
     align-content: center;
-    gap: 40px;
+    gap: 35px; 
+}
+.webStack {
+    width: 330px;
+    flex-wrap: wrap;
 }
 
+                                                                /* PROJECT SECTION */
+.projects {
+    background-image: url(Assets/BackgroundImg/PortfolioProjectsPage.png);
+    background-size: 100% 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    top: 270%;
+    z-index: -1;   
+}
+.projects h1 {
+    font-size: 2.5em;
+    font-family: "Urbanist", sans-serif;
+    color: white;
+    font-weight: 400;
+}
+.cards img {
+    width: 275px;
+    height: 275px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+.cardsProjects {
+    display: flex;
+    flex-direction: row;
+    font-family: "Urbanist", sans-serif;
+    font-size: 15px;
+    color: white;
+}
+.cards {
+    margin: 10px 20px;
+    flex-wrap: wrap;
+    flex-direction: column;
+    width: 275px;
+    text-align: center;
+    display: flex;
+    background-color: black;
+    border-radius: 20px;
+}
+.cards h2{
+    margin: 10px 20px;
+}
+.cards p{
+    margin: 10px 20px;
+}
+/* Media Queries */
+@media (max-width: 768px) {
+    .LandingPageTitle {
+        width: 90%;
+        margin-left: 20px;
+        top: 10em;
+    }
+    .AboutMeText {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .stackIcons{
+        flex-direction: column;
+    }
+}
