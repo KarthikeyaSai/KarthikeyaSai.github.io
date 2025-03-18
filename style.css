@@ -3,8 +3,11 @@ html, body {
     overflow-x: hidden;
     margin: 0;
     padding: 0;
+    overflow-x: hidden;
     background-color: rgb(25, 25, 25);
+    scroll-behavior: smooth;
 }
+
 
                                                                             /* Navbar */
 .navBorder {
@@ -41,7 +44,7 @@ html, body {
     border-radius: 30px;
     transition: all 0.3s ease;
     z-index: 1;
-    padding:5px 2px;
+    padding:10px 2px;
 
 
 }
@@ -153,9 +156,9 @@ html, body {
     border-radius: 100%;
     text-align: center;
     
-    background: linear-gradient(-45deg, #ffffff,#464646, #342355, #2b063d);
+    background: linear-gradient(-45deg, #7000d1,#000bd6, #342355, #8202c3);
 	background-size: 400% 400%;
-	animation: image 5s ease infinite;
+	animation: image 3s ease infinite;
 }
 @keyframes image {
 	0% {
@@ -198,7 +201,9 @@ html, body {
     border-radius: 30px;
     padding: 30px 5px;
     z-index: -2;
+
 }
+
 .stackGrid:before {
     content: '';
     position: absolute;
@@ -220,6 +225,9 @@ html, body {
     color: white;
     font-family: "Urbanist", serif;
     font-weight: 500;
+}
+.stackGrid h2 {
+    margin: 40px;
 }
 .stackGrid h5{
     font-size: 1.25em;
@@ -390,15 +398,59 @@ form::before {
 .contactGrid .icons{
     width: 45px;
 }
+.stackGrid , .cardsProjects,.projects h1, .AboutMeText  {
+    animation: appear linear;
+    animation-timeline: view();
+    animation-range: entry 0%; 
+}
+
+
+
+@keyframes appear {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
 
 /* Media Queries */
 @media (max-width: 768px) {
     .AboutMeText {
         flex-direction: column;
         gap: 20px;
+        font-size: 12px;
+        width: 100%;
+    }
+    .AboutMe img{
+        width: 150px;
+        height: 150px;
+        border-radius: 100%;
+        margin: auto;
     }
 
     .stackIcons{
         flex-direction: column;
+    }
+    .grid .icons {
+        size: 10px;
+        display: none;
+    }
+    .cardsProjects {
+        flex-direction: column;
+    }
+    .cards img{
+        width: 200px;
+        height: 200px;
+        border-radius: 15px;
+    }
+    .cards p {
+        display: none;
+    }
+    .cards h2{
+        size: 10px;
+        display: none;
     }
 }
